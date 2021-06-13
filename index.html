@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+<script>
+    function widok(num)
+    {
+        document.getElementById("wynik").value+=num
+    }
+    function oblicz()
+    {
+        let x = document.getElementById("wynik").value
+        let y = eval(x)
+        document.getElementById("wynik").value = y
+    }
+    function clr()
+    {
+        document.getElementById("wynik").value = ""
+    }
+
+
+
+
+
+    
+    
+ 
+   
+    
+</script>
+<style>
+    input[type= "button"]
+    {
+        background-color:green;
+        color:black;
+        border: solid black 2px;
+        width:100%;
+    }
+    
+    input[type= "text"]
+    {
+        background-color:white;
+        border: solid black 2px;
+        width:100%;
+    }
+    #kalkulator
+    {
+        background-color: rgb(0, 88, 44);
+        font-size: 20px;
+   min-width:  width: 1000px;
+    min-height: 1000px;
+     font-family: 'Helvetica Neue', Helvetica, sans-serif; 
+
+    }
+
+    
+    
+ 
+</style>
+</head>
+<body>
+    <div id="kalkulator">
+    <center><br><br>
+   <div id= "tytuł"> <h1> kalkulator</h1></div>
+    
+    <table border="20">
+            <tr>    
+                <td colspan="3"><input type="text" id="wynik"/></td>
+                <td><input type="button" value="c" onclick="clr()"/> </td>
+            </tr>
+            <tr>
+                <td><input type="button" value="1" onclick="widok('1')"/> </td>
+                <td><input type="button" value="2" onclick="widok('2')"/> </td>
+                <td><input type="button" value="3" onclick="widok('3')"/> </td>
+                <td><input type="button" value="/" onclick="widok('/')"/> </td>
+            </tr>
+            <tr>
+                <td><input type="button" value="4" onclick="widok('4')"/> </td>
+                <td><input type="button" value="5" onclick="widok('5')"/> </td>
+                <td><input type="button" value="6" onclick="widok('6')"/> </td>
+                <td><input type="button" value="-" onclick="widok('-')"/> </td>
+            </tr>
+            <tr>
+                <td><input type="button" value="7" onclick="widok('7')"/> </td>
+                <td><input type="button" value="8" onclick="widok('8')"/> </td>
+                <td><input type="button" value="9" onclick="widok('9')"/> </td>
+                <td><input type="button" value="+" onclick="widok('+')"/> </td>
+            </tr>
+            <tr>
+                <td><input type="button" value="." onclick="widok('.')"/> </td>
+                <td><input type="button" value="0" onclick="widok('0')"/> </td>
+                <td><input type="button" value="=" onclick="oblicz()"/> </td>
+                <td><input type="button" value="*" onclick="widok('*')"/> </td>
+            </tr>
+    </table>
+    </center>
+</div>
+    
+</body>
+</html>
